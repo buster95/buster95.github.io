@@ -55,12 +55,12 @@
                                 </a>
 
                                 <hr class="vertical" style="height: 30px;">
-                                <a href="#" class="nav-tab-link">
+                                <a onclick="javascript:showContent('experience')" class="nav-tab-link">
                                     <!-- <img src="./assets/navicons/portfolio.svg" title="Gmail" alt="not load"
                                         style="width: fit-content; max-width: 30px;"> -->
                                     <img type="image/svg+xml" src="./assets/navicons/portfolio.svg" alt="not found" />
                                     <br>
-                                    Work
+                                    Experience
                                 </a>
 
                                 <hr class="vertical" style="height: 30px;">
@@ -73,14 +73,14 @@
                                 </a>
 
                                 <hr class="vertical" style="height: 30px;">
-                                <a href="#" class="nav-tab-link">
+                                <a onclick="javascript:showContent('achievements')" class="nav-tab-link">
                                     <img type="image/svg+xml" src="./assets/navicons/experience.svg" alt="not found" />
                                     <br>
                                     Achievements
                                 </a>
 
                                 <hr class="vertical" style="height: 30px;">
-                                <a href="#" class="nav-tab-link">
+                                <a onclick="javascript:showContent('contact')" class="nav-tab-link">
                                     <img type="image/svg+xml" src="./assets/navicons/email.svg" alt="not found" />
                                     <br>
                                     Contact
@@ -141,7 +141,7 @@
                         </style>
                         <div class="col-xs-12">
                             <div class="row middle-xs around-xs nav-bottom">
-                                <a href="#">Download CV</a>
+                                <a href="./assets/cv.pdf" target="_blank">Download CV</a>
                                 <hr class="vertical" style="height: 30px;">
                                 <a href="mailto:corraleswalter@live.com">Contact Me</a>
                             </div>
@@ -152,6 +152,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-8">
+
                 <div id="content-resume" class="md-card md-elevation-z1" style="width: 100%; padding:20px 40px;">
                     <div class="row">
                         <div class="col-xs-12">
@@ -159,8 +160,9 @@
                             <hr style="margin:10px 0;">
 
                             <div class="row around-xs">
-                                <div class="col-xs-12 col-sm-5">
-                                    Hello there, I'm a entusiast programmer I love all that about technology
+                                <div class="col-xs-12 col-sm-5" style="text-align: justify;">
+                                    Hello there, I'm a enthusiast programmer, I love everything related to technology,
+                                    I like to solve problem that have to do with a computer
                                 </div>
 
                                 <div class="col-xs-12 col-sm-offset-2 col-sm-5">
@@ -220,6 +222,16 @@
                     </div>
                 </div>
 
+                <div id="content-experience" class="md-card md-elevation-z1" style="width: 100%; padding: 20px 40px;">
+                    <style> </style>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Experience</h3>
+                            <hr style="margin:10px 0;">
+                        </div>
+                    </div>
+                </div>
+
                 <div id="content-skills" class="md-card md-elevation-z1" style="width: 100%; padding: 20px 40px;">
                     <div class="row">
                         <div class="col-xs-12">
@@ -251,33 +263,65 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="content-achievements" class="md-card md-elevation-z1" style="width: 100%; padding: 20px 40px;">
+                    <style> </style>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Achievements</h3>
+                            <hr style="margin:10px 0;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="content-contact" class="md-card md-elevation-z1" style="width: 100%; padding: 20px 40px;">
+                    <style> </style>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Contact</h3>
+                            <hr style="margin:10px 0;">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
     <script>
         var contentResume = document.getElementById('content-resume');
+        var contentExperience = document.getElementById('content-experience');
         var contentSkills = document.getElementById('content-skills');
+        var contentAchievements = document.getElementById('content-achievements');
+        var contentContact = document.getElementById('content-contact');
         contentResume.style.display = 'flex';
+        contentExperience.style.display = 'none';
         contentSkills.style.display = 'none';
+        contentAchievements.style.display = 'none';
+        contentContact.style.display = 'none';
+
         function showContent(contentType) {
             contentResume.style.display = 'none';
+            contentExperience.style.display = 'none';
             contentSkills.style.display = 'none';
+            contentAchievements.style.display = 'none';
+            contentContact.style.display = 'none';
             switch (contentType) {
                 case 'resume':
                     contentResume.style.display = 'flex';
                     break;
-                case 'works':
-                    contentResume.style.display = 'flex';
+                case 'experience':
+                    contentExperience.style.display = 'flex';
                     break;
                 case 'skills':
                     contentSkills.style.display = 'flex';
                     break;
                 case 'achievements':
-                    contentResume.style.display = 'flex';
+                    contentAchievements.style.display = 'flex';
                     break;
                 case 'contact':
-                    contentResume.style.display = 'flex';
+                    contentContact.style.display = 'flex';
                     break;
                 default:
                     break;
