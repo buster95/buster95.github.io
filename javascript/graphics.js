@@ -55,13 +55,13 @@ am4core.ready(function () {
         { "title": "Javascript", "percent": 10 },
         { "title": "Typescript", "percent": 9 },
         { "title": "PHP", "percent": 9 },
-        { "title": "C# (.netcore)", "percent": 9 },
-        { "title": "JSP", "percent": 9 },
+        { "title": "C# (.netcore)", "percent": 9.5 },
+        { "title": "JSP", "percent": 8 },
         { "title": "AngularJS", "percent": 10 },
-        { "title": "Angular", "percent": 9 },
+        { "title": "Angular", "percent": 9.5 },
         { "title": "WebPack", "percent": 9 },
-        { "title": "nodeJS", "percent": 9 },
-        { "title": "WebServices \n(SOAP, APIRest, GraphQL)", "percent": 9 },
+        { "title": "nodeJS", "percent": 10 },
+        { "title": "WebServices \n(SOAP, APIRest, GraphQL)", "percent": 10 },
     ];
     /* Create axes */
     var categoryAxis2 = webChart.xAxes.push(new am4charts.CategoryAxis());
