@@ -1,7 +1,7 @@
 :root {
     --primary-color  : #221C59;
     --secondary-color: #F33B2F;
-    --text-color     : white;
+    --text-color     : #fff;
 }
 
 html,
@@ -17,6 +17,11 @@ body,
     font-family       : 'Fira Sans', sans-serif;
 }
 
+html,
+body {
+    overflow: hidden;
+}
+
 body {
     background           : #232526;
     /* fallback for old browsers */
@@ -28,7 +33,6 @@ body {
     background-repeat    : no-repeat;
     background-position  : center;
     background-attachment: fixed;
-    overflow             : hidden;
 }
 
 .main {
@@ -42,8 +46,15 @@ body {
     display   : flex;
     flex-flow : column nowrap;
     max-width : 600px;
-    max-height: 200px;
+    max-height: 350px;
     margin-top: -190px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-height: 380px;
+        margin-top: -100px;
+    }
 }
 
 .row {
