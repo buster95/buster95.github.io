@@ -5,63 +5,363 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hi There</title>
+    <title>I'm Walter Corrales</title>
     <link rel="shortcut icon" href="favicon.png" type="image/png">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,200;1,600;1,700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <link rel="stylesheet" href="./css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="./css/flexboxgrid.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <div class="container-fluid" style="margin: 30px 0;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <!-- CARD VIEW1 START -->
+                <div class="md-card md-elevation-z2"
+                    style="margin: 0 0 20px; padding-bottom:0; position: sticky; position: -webkit-sticky;">
+                    <div class="row">
+                        <div class="col-xs-12" style="margin-bottom:10px;">
+                            <style>
+                                .nav-tab-link {
+                                    text-align: center;
+                                    font-size: small;
+                                    padding: 10px;
+                                    cursor: pointer;
+                                    border-radius: 3px;
+                                }
 
-    <div class="main">
-        <div class="container">
-            <div class="row animate__animated animate__bounceInDown animate__slow">
-                <img src="./assets/pp.jpg" alt="pp.jpg" class="img-profile">
+                                .nav-tab-link:hover {
+                                    background-color: rgba(0, 0, 0, 0.1);
+                                }
 
-                <!-- <div class="ripple-container">
-                    <span class="ripple-effect"></span>
-                </div> -->
+                                .nav-tab-link.active embed svg,
+                                .nav-tab-link.active {
+                                    color: red;
+                                    fill: red;
+                                }
+
+                                .nav-tab-link img {
+                                    width: fit-content;
+                                    max-width: 30px;
+                                }
+
+                                @media (max-width: 480px) {
+                                    .nav-tab-link {
+                                        padding: 10px 5px;
+                                        font-size: 10px;
+                                    }
+
+                                    .nav-tab-link img {
+                                        max-width: 20px;
+                                    }
+                                }
+                            </style>
+                            <div class="row middle-xs around-xs">
+                                <a onclick="javascript:showContent('resume')" class="nav-tab-link">
+                                    <!-- <img src="./assets/navicons/resume.svg" alt="not load"
+                                        style="width: fit-content; max-width: 30px; fill:green;"> -->
+                                    <img type="image/svg+xml" src="./assets/navicons/resume.svg" alt="not found" />
+                                    <br>
+                                    Resume
+                                </a>
+
+                                <hr class="vertical" style="height: 30px;">
+                                <a onclick="javascript:showContent('experience')" class="nav-tab-link">
+                                    <!-- <img src="./assets/navicons/portfolio.svg" title="Gmail" alt="not load"
+                                        style="width: fit-content; max-width: 30px;"> -->
+                                    <img type="image/svg+xml" src="./assets/navicons/portfolio.svg" alt="not found" />
+                                    <br>
+                                    Experience
+                                </a>
+
+                                <hr class="vertical" style="height: 30px;">
+                                <a onclick="javascript:showContent('skills')" class="nav-tab-link">
+                                    <!-- <img src="./assets/navicons/candidate.svg" alt="not load"
+                                        style="width: max-content; max-width: 30px;"> -->
+                                    <img type="image/svg+xml" src="./assets/navicons/candidate.svg" alt="not found" />
+                                    <br>
+                                    Skills
+                                </a>
+
+                                <hr class="vertical" style="height: 30px;">
+                                <a onclick="javascript:showContent('achievements')" class="nav-tab-link">
+                                    <img type="image/svg+xml" src="./assets/navicons/experience.svg" alt="not found" />
+                                    <br>
+                                    Achievements
+                                </a>
+
+                                <hr class="vertical" style="height: 30px;">
+                                <a onclick="javascript:showContent('contact')" class="nav-tab-link">
+                                    <img type="image/svg+xml" src="./assets/navicons/email.svg" alt="not found" />
+                                    <br>
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <div class="image-profile"></div>
+                        </div>
+
+                        <div class="col-xs-12 center-xs">
+                            <br>
+                            <h2> Walter Corrales </h2>
+                            <small style="font-size: 14px;">Software Engineer</small>
+                            <br>
+                            <br>
+
+                            <div class="row middle-xs around-xs">
+                                <a href="https://www.linkedin.com/in/walter-corrales/" title="Linkedin" target="_blank">
+                                    <img src="./assets/linkedin.svg" alt="not load"
+                                        style="width: fit-content; max-width: 40px;">
+                                </a>
+
+                                <a href="mailto:corraleswalter@live.com" title="Microsoft">
+                                    <img src="./assets/microsoft.svg" alt="not load"
+                                        style="width: fit-content; max-width: 40px;">
+                                </a>
+
+                                <a href="mailto:walter.r.corrales@gmail.com">
+                                    <img src="./assets/gmail.svg" title="Gmail" alt="not load"
+                                        style="width: fit-content; max-width: 40px;">
+                                </a>
+
+                                <a href="https://github.com/buster95" title="Github" target="_blank">
+                                    <img src="./assets/github.svg" alt="not load"
+                                        style="width: fit-content; max-width: 40px;">
+                                </a>
+
+                                <a href="https://bitbucket.com/buster95" title="Bitbucket" target="_blank">
+                                    <img src="./assets/bitbucket.svg" alt="not load"
+                                        style="width: fit-content; max-width: 40px;">
+                                </a>
+                            </div>
+
+                            <hr style="margin-top: 15px;">
+                        </div>
+
+                        <style>
+                            .nav-bottom a {
+                                padding: 15px 30px;
+                            }
+
+                            .nav-bottom a:hover {
+                                background: rgba(0, 0, 0, 0.2);
+                                border-radius: 3px;
+                            }
+                        </style>
+                        <div class="col-xs-12">
+                            <div class="row middle-xs around-xs nav-bottom">
+                                <a href="./assets/cv.pdf" target="_blank">Download CV</a>
+                                <hr class="vertical" style="height: 30px;">
+                                <a href="mailto:corraleswalter@live.com">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD VIEW1 END -->
             </div>
 
-            <div class="row animate__animated animate__bounceInLeft animate__slow" style="margin-top: 10px;">
-                <h1 style="font-weight: 700;">
-                    I'm a FullStack Developer.<small class="blinking">|</small>
-                </h1>
-            </div>
+            <div class="col-xs-12 col-sm-8">
 
-            <div class="row animate__animated animate__bounceInRight animate__slow" style="margin-top: 10px;">
-                <h4>
-                    <small class="label" style="font-weight: 200;">Walter Corrales</small>
-                    - Located in Managua, Nicaragua
-                </h4>
-            </div>
+                <div id="content-resume" class="md-card md-elevation-z1" style="width: 100%; padding:20px 40px;">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>About Me</h3>
+                            <hr style="margin:10px 0;">
 
-            <div class="row animate__animated animate__bounceInLeft animate__slow" style="margin-top: 10px;">
-                I am a guy passionate about development, addicted to the command line and a lover of electronics
-            </div>
+                            <div class="row around-xs">
+                                <div class="col-xs-12 col-sm-5" style="text-align: justify;">
+                                    Hello there, I'm a enthusiast programmer, I love everything related to technology,
+                                    I like to solve problem that have to do with a computer
+                                </div>
 
-            <div class="row animate__animated animate__bounceInUp animate__slow" style="margin-top: 10px;">
-                <a class="link" href="https://www.linkedin.com/in/walter-corrales/">LinkedIn</a>
-                ●
-                <a class="link" href="mailto:corraleswalter@live.com">Microsoft</a>
-                ●
-                <a class="link" href="mailto:walter.r.corrales@gmail.com">Gmail</a>
-                ●
-                <a class="link" href="https://github.com/buster95">Github</a>
-                ●
-                <a class="link" href="https://bitbucket.org/buster95">Bitbucket</a>
+                                <div class="col-xs-12 col-sm-offset-2 col-sm-5">
+                                    <div class="row between-xs center-xs">
+                                        <label class="md-chip">Residence</label>
+                                        <p>Nicaragua</p>
+                                    </div>
+                                    <hr style="margin-bottom: 15px;">
+
+                                    <div class="row between-xs center-xs">
+                                        <label class="md-chip">City</label>
+                                        <p>Managua</p>
+                                    </div>
+                                    <hr style="margin-bottom: 15px;">
+
+                                    <div class="row between-xs center-xs">
+                                        <label class="md-chip">Age</label>
+                                        <p>24</p>
+                                    </div>
+                                    <hr style="margin-bottom: 15px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h3>My Services</h3>
+                            <hr style="margin:10px 0;">
+
+                            <div class="row around-xs">
+                                <div class="col-xs-12 col-sm-5">
+                                    <div class="column middle-xs center-xs">
+                                        <img src="./assets/domain.svg" style="width:fit-content; max-width:100px;"
+                                            alt="not load">
+                                        <br>
+                                        <p style="font-weight: bold;"> Web Development </p>
+                                    </div>
+                                    <p style="font-size: 14px; margin-top: 10px; text-align: justify;">
+                                        Modern and Responsive website ready for your bussines, using the latest
+                                        technologies for web development.
+                                    </p>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-offset-2 col-sm-5">
+                                    <div class="column middle-xs center-xs">
+                                        <img src="./assets/mobile.svg" style="width:fit-content; max-width:100px;"
+                                            alt="not load">
+                                        <br>
+                                        <p style="font-weight: bold;"> Mobile Development </p>
+                                    </div>
+
+                                    <p style="font-size: 14px; margin-top: 10px; text-align: justify;">
+                                        Beatiful mobile apps with a excellent Ux, advice and follow-up to publish your
+                                        app on google play
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-experience" class="md-card md-elevation-z1" style="width: 100%; padding: 20px 40px;">
+                    <style> </style>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Experience</h3>
+                            <hr style="margin:10px 0;">
+
+                            <div class="row around-xs">
+                                <div class="col-xs-12 col-sm-5">
+                                    <h4>
+                                        Escuela Nacional de Hoteleria
+                                        <br>
+                                        <small>Docente (Curso Procesador de Texto)</small>
+                                        <br>
+                                        <small>Nov/2015</small>
+                                    </h4>
+                                    <hr style="margin:10px 0;">
+                                </div>
+
+                                <div class="col-xs-12 col-sm-offset-1 col-sm-5">
+                                    <h4>
+                                        Universidad Nacional de Ingenieria
+                                        <br>
+                                        <small>Analista de Sistemas</small>
+                                        <br>
+                                        <small style="color:red;">
+                                            Analista, Desarrollador, Administrador, Tester,
+                                            Capacitador y soporte de sistemas, Project Manager.</small>
+                                        <br>
+                                        <small>Junio/2016 – Diciembre/2019</small>
+                                    </h4>
+                                    <hr style="margin:10px 0;">
+                                </div>
+
+                                <div class="col-xs-12 col-sm-5">
+                                    <h4>
+                                        Universidad Nacional de Ingenieria (Posgrado - PVIT)
+                                        <br>
+                                        <small>Docente</small>
+                                        <br>
+                                        <small style="color:red">Base de datos SQL Server 2014</small>
+                                        <br>
+                                        <small>Noviembre/2017 – Febrero/2017</small>
+                                    </h4>
+                                    <hr style="margin:10px 0;">
+                                </div>
+
+                                <div class="col-xs-12 col-sm-offset-1 col-sm-5">
+                                    <h4>
+                                        NovelCovid/API
+                                        <br>
+                                        <small>Code Contributor</small>
+                                        <br>
+                                        <small><a href="https://github.com/novelcovid/api" target="_BLANK">Github
+                                                Project</a></small>
+                                    </h4>
+                                    <hr style="margin:10px 0;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-skills" class="md-card md-elevation-z1" style="width: 100%; padding: 20px 40px;">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Skills</h3>
+                            <hr style="margin:10px 0;">
+
+                            <style>
+                                .graph-skill {
+                                    height: 400px;
+                                }
+                            </style>
+                            <div class="row around-xs">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div id="chartdiv1" class="graph-skill"></div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6">
+                                    <div id="chartdiv2" class="graph-skill"></div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6">
+                                    <div id="chartdiv3" class="graph-skill"></div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6">
+                                    <div id="chartdiv4" class="graph-skill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-achievements" class="md-card md-elevation-z1" style="width: 100%; padding: 20px 40px;">
+                    <style> </style>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Achievements</h3>
+                            <hr style="margin:10px 0;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="content-contact" class="md-card md-elevation-z1" style="width: 100%; padding: 20px 40px;">
+                    <style> </style>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Contact</h3>
+                            <hr style="margin:10px 0;">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <a href="./assets/cv.pdf" target="_blank" class="btn-floating" title="Download My CV">
-        <span class="material-icons-round"> assignment_returned </span>
-    </a>
+    <script src="./javascript/tabs_actions.js"></script>
+    <script src="https://www.amcharts.com/lib/version/4.7.18/core.js"></script>
+    <script src="https://www.amcharts.com/lib/version/4.7.18/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/version/4.7.18/themes/material.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/version/4.7.18/lang/es_ES.js"></script>
+    <script src="./javascript/graphics.js"></script>
 </body>
 
 </html>
