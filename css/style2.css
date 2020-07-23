@@ -47,7 +47,7 @@ body {
     flex-flow : column nowrap;
     max-width : 600px;
     max-height: 350px;
-    margin-top: -190px;
+    margin-top: -100px;
 }
 
 @media (max-width: 480px) {
@@ -64,7 +64,7 @@ body {
 }
 
 .btn-floating {
-    position        : absolute;
+    position        : fixed;
     width           : 48px;
     height          : 48px;
     padding         : 12px 12px;
@@ -101,6 +101,49 @@ body {
     max-width    : 200px;
     max-height   : 200px;
     border-radius: 50%;
+}
+
+.banner {
+    display         : block;
+    position        : fixed;
+    top             : 20px;
+    right           : 85px;
+    padding         : 16px 12px;
+    border-radius   : 10px;
+    height          : auto;
+    width           : auto;
+    color           : var(--secondary-color);
+    background-color: var(--text-color);
+}
+
+.banner::after {
+    content      : '';
+    display      : block;
+    position     : absolute;
+    z-index      : -1;
+    top          : 10px;
+    right        : -26px;
+    width        : 0;
+    height       : 0;
+    border-radius: 10px;
+    border-color : var(--text-color) transparent transparent;
+    border-width : 15px 15px;
+    border-style : solid;
+    transform    : rotate(-90deg);
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: 12px;
+        padding  : 10px;
+        right    : 75px;
+    }
+
+    .banner::after {
+        border-width: 10px 10px;
+        top         : 8px;
+        right       : -15px;
+    }
 }
 
 .blinking {
