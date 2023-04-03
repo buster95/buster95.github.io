@@ -1,0 +1,54 @@
+---
+import Content from "./atoms/Content.astro";
+import TimelineItem from "./molecules/TimelineItem.astro";
+
+const startingYear = 2016;
+const currentYear = new Date().getFullYear();
+---
+
+<div id="experience" class="w-full p-12 bg-black-0 text-white">
+    <Content>
+        <div class="w-full">
+            <h1 class="text-4xl mb-6">
+                Experience (+{currentYear - startingYear} years)
+            </h1>
+
+            <ol class="relative border-l-2 border-white">
+                <TimelineItem
+                    time="September 2021 - January 2023"
+                    title="Moonshot Partners"
+                    subtitle="Software Engineer II"
+                    location="London, UK"
+                />
+
+                <TimelineItem
+                    time="July 2021 - November 2021"
+                    title="Opus Behavioral"
+                    subtitle="Software Engineer"
+                    location="Florida, USA"
+                />
+
+                <TimelineItem
+                    time="March 2021 - June 2021"
+                    title="CONTOLLO"
+                    subtitle="Fullstack Developer"
+                    location="Managua, Nicaragua"
+                />
+
+                <TimelineItem
+                    time="January 2020 - March 2021"
+                    title="Instituto Nacional de Seguridad Social"
+                    subtitle=" Integrador de Sistemas"
+                    location="Managua, Nicaragua"
+                />
+
+                <TimelineItem
+                    time="June 2016 - December 2019"
+                    title="Universidad Nacional de Ingenieria"
+                    subtitle="Analista de Sistemas"
+                    location="Managua, Nicaragua"
+                />
+            </ol>
+        </div>
+    </Content>
+</div>

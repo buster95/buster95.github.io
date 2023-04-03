@@ -1,0 +1,85 @@
+---
+import Content from "./atoms/Content.astro";
+import myPicture from "../assets/images/pp.jpg";
+import githubIcon from "../assets/images/github.svg";
+import linkedIcon from "../assets/images/linkedin.svg";
+import whatsappIcon from "../assets/images/whatsapp.svg";
+import googleIcon from "../assets/images/google.svg";
+import { MenuItem } from "./atoms/menu-item";
+---
+
+<div class="welcoming w-full p-12">
+    <Content
+        className="tablet-down:flex-col-reverse tablet-down:justify-center"
+    >
+        <div
+            class="w-full tablet-down:flex tablet-down:flex-col tablet-down:items-center tablet-down:mt-6"
+        >
+            <p
+                class="text-6xl tablet-down:text-3xl tablet-down:text-center animate__animated animate__slideInLeft"
+            >
+                <small class="text-3xl tablet-down:text-xl">
+                    Hi 👋🏻 I'm Walter Corrales.
+                </small>
+                <br /> A
+                <small class="text-primary font-bold">
+                    Software Developer
+                </small> from Nicaragua
+            </p>
+
+            <div
+                class="flex items-center w-full mt-4 tablet-down:justify-center"
+            >
+                <a
+                    class="px-3 pl-0"
+                    title="my github"
+                    href="https://github.com/buster95"
+                    target="_blank"
+                >
+                    <img src={githubIcon} class="aspect-square w-8" />
+                </a>
+
+                <a
+                    class="px-3"
+                    title="my linkedin"
+                    href="https://www.linkedin.com/in/walter-corrales"
+                    target="_blank"
+                >
+                    <img src={linkedIcon} class="aspect-square w-8" />
+                </a>
+
+                <a
+                    class="px-3"
+                    title="my github"
+                    href="https://github.com/buster95"
+                    target="_blank"
+                >
+                    <img src={whatsappIcon} class="aspect-square w-8" />
+                </a>
+
+                <a
+                    class="px-3 pr-0"
+                    title="my github"
+                    href="https://github.com/buster95"
+                    target="_blank"
+                >
+                    <img src={googleIcon} class="aspect-square w-8" />
+                </a>
+            </div>
+        </div>
+
+        <div
+            class="relative flex justify-center items-center w-full max-w-[300px]"
+        >
+            <img
+                class="aspect-square rounded-full w-full z-[2] animate__animated animate__slideInRight"
+                src={myPicture}
+                alt="this is me"
+            />
+            <div
+                class="circle bg-primary aspect-square absolute rounded-full w-full mt-8 ml-40 max-w-[250px] z-[1] animate__animated animate__delay-0.5s animate__slideInLeft"
+            >
+            </div>
+        </div>
+    </Content>
+</div>
