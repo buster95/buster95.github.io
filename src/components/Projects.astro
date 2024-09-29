@@ -1,10 +1,6 @@
 ---
-import Content from "./atoms/Content.astro";
-import { ProjectCard } from "./molecules/project-card";
-
-// projects pics
-import thorsystem from "../assets/images/projects/thorsystem.jpg";
-import wizme from "../assets/images/projects/wizme.png";
+import Content from "./Content.astro";
+import ProjectCard  from "./ProjectCard.astro";
 ---
 
 <div class="w-full p-12">
@@ -18,25 +14,25 @@ import wizme from "../assets/images/projects/wizme.png";
                 <ProjectCard
                     title="Wizard"
                     description="e-learning app to learn a new language, development for Pearson Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus repudiandae ducimus quis, laudantium repellendus sint! Saepe molestias quae, maiores hic laborum natus tempore a consequuntur odit mollitia minus suscipit. Quis."
-                    image={wizme}
+                    image="/images/projects/wizme.png"
                 />
 
                 <ProjectCard
                     title="ThorSystem"
                     description="App to view, control and storage stats from electric generators"
-                    image={thorsystem}
+                    image="/images/projects/thorsystem.jpg"
                 />
 
                 <ProjectCard
                     title="ThorSystem"
                     description="App to view, control and storage stats from electric generators"
-                    image={thorsystem}
+                    image="/images/projects/thorsystem.jpg"
                 />
 
                 <ProjectCard
                     title="ThorSystem"
                     description="App to view, control and storage stats from electric generators"
-                    image={thorsystem}
+                    image="/images/projects/thorsystem.jpg"
                 />
             </div>
         </div>

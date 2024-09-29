@@ -1,0 +1,47 @@
+<ul
+    id="menu"
+    class="flex justify-between py-2 -top-[100%] tablet-down:fixed tablet-down:left-0 tablet-down:z-[200] tablet-down:flex-col tablet-down:items-center tablet-down:justify-start tablet-down:bg-white tablet-down:w-full tablet-down:h-full tablet-down:px-4 tablet-down:pt-16 tablet-down:transition-all tablet-down:duration-500"
+>
+    <li
+        class="hover:bg-primary hover:text-white rounded-3xl cursor-pointer flex items-center tablet-down:w-full"
+        id="menu-experience"
+    >
+        <a class="p-4 w-full">Experience</a>
+    </li>
+
+    <li
+        class="hover:bg-primary hover:text-white rounded-3xl cursor-pointer flex items-center tablet-down:w-full"
+        id="menu-experience"
+    >
+        <a class="p-4 w-full">Projects</a>
+    </li>
+
+    <li
+        class="hover:bg-primary hover:text-white rounded-3xl cursor-pointer flex items-center tablet-down:w-full"
+        id="menu-experience"
+    >
+        <a href="/files/cv.pdf" target='_blank' class="p-4 w-full">Download CV</a>
+    </li>
+</ul>
+
+<script>
+    const elements = document.querySelector('li')
+
+    const moveToElement = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
+    }
+
+    const closeMenu = () => {
+        const menu = document.getElementById("menu");
+        menu?.classList.remove("top-0");
+        menu?.classList.add("-top-[100%]");
+        const btnToggle = document.getElementById("menu-toggle");
+        btnToggle?.classList.remove("isOpen");
+    }
+
+    const handleOnClick = (callback?: () => void) => {
+        closeMenu();
+        callback?.();
+    }
+</script>

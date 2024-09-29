@@ -1,9 +1,9 @@
 ---
 import "animate.css";
 import "./Layout.scss";
-import myPicture from "../assets/images/pp.jpg";
-import Navbar from "../components/Navbar.astro";
-export interface Props {
+import Navbar from "@src/components/Navbar.astro";
+
+interface Props {
     title: string;
 }
 
@@ -17,7 +17,7 @@ const { title } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="stylesheet" href="./" />
-        <link rel="preload" href={myPicture} as="image" />
+        <link rel="preload" href="/images/pp.jpg" as="image" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>

@@ -1,6 +1,6 @@
 ---
-import Content from "./atoms/Content.astro";
-import TimelineItem from "./molecules/TimelineItem.astro";
+import Content from "./Content.astro";
+import TimelineItem from "./TimelineItem.astro";
 
 const startingYear = 2016;
 const currentYear = new Date().getFullYear();
@@ -14,6 +14,13 @@ const currentYear = new Date().getFullYear();
             </h1>
 
             <ol class="relative border-l-2 border-white">
+                <TimelineItem
+                    time="March 2023 - July 2024"
+                    title="Alicunde Systems"
+                    subtitle="Software Developer"
+                    location="Madrid, Spain"
+                />
+
                 <TimelineItem
                     time="September 2021 - January 2023"
                     title="Moonshot Partners"

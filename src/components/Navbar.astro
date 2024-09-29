@@ -1,6 +1,5 @@
 ---
-import cv from "../assets/files/cv.pdf";
-import { Menu } from "./atoms/menu";
+import Menu from "./Menu.astro";
 ---
 
 <nav
@@ -53,7 +52,7 @@ import { Menu } from "./atoms/menu";
         </button>
     </div>
 
-    <Menu client:load />
+    <Menu />
 </nav>
 
 <style>

@@ -1,11 +1,5 @@
 ---
-import Content from "./atoms/Content.astro";
-import myPicture from "../assets/images/pp.jpg";
-import githubIcon from "../assets/images/github.svg";
-import linkedIcon from "../assets/images/linkedin.svg";
-import whatsappIcon from "../assets/images/whatsapp.svg";
-import googleIcon from "../assets/images/google.svg";
-import { MenuItem } from "./atoms/menu-item";
+import Content from "./Content.astro";
 ---
 
 <div class="welcoming w-full p-12">
@@ -18,13 +12,16 @@ import { MenuItem } from "./atoms/menu-item";
             <p
                 class="text-6xl tablet-down:text-3xl tablet-down:text-center animate__animated animate__slideInLeft"
             >
-                <small class="text-3xl tablet-down:text-xl">
+                <small class="text-xl tablet-down:text-xl">
                     Hi 👋🏻 I'm Walter Corrales.
                 </small>
                 <br /> A
-                <small class="text-primary font-bold">
-                    Software Developer
-                </small> from Nicaragua
+                <small class="text-primary font-bold typewrite" data-period="2000" data-type="['Fullstack', 'Frontend', 'Backend']">
+                    Fullstack
+                </small>
+                <small class="text-primary font-bold" >
+                     Developer
+                </small><br/> from Nicaragua
             </p>
 
             <div
@@ -36,7 +33,7 @@ import { MenuItem } from "./atoms/menu-item";
                     href="https://github.com/buster95"
                     target="_blank"
                 >
-                    <img src={githubIcon} class="aspect-square w-8" />
+                    <img src="/images/github.svg" class="aspect-square w-8" />
                 </a>
 
                 <a
@@ -45,7 +42,7 @@ import { MenuItem } from "./atoms/menu-item";
                     href="https://www.linkedin.com/in/walter-corrales"
                     target="_blank"
                 >
-                    <img src={linkedIcon} class="aspect-square w-8" />
+                    <img src="/images/linkedin.svg" class="aspect-square w-8" />
                 </a>
 
                 <a
@@ -54,16 +51,17 @@ import { MenuItem } from "./atoms/menu-item";
                     href="https://github.com/buster95"
                     target="_blank"
                 >
-                    <img src={whatsappIcon} class="aspect-square w-8" />
+                    <whatsappIcon />
+                    <img src="/images/google.svg" class="aspect-square w-8" />
                 </a>
 
                 <a
                     class="px-3 pr-0"
                     title="my github"
-                    href="https://github.com/buster95"
+                    href="https://wa.me/50585154220"
                     target="_blank"
                 >
-                    <img src={googleIcon} class="aspect-square w-8" />
+                    <img src="/images/whatsapp.svg" class="aspect-square w-8" />
                 </a>
             </div>
         </div>
@@ -73,7 +71,7 @@ import { MenuItem } from "./atoms/menu-item";
         >
             <img
                 class="aspect-square rounded-full w-full z-[2] animate__animated animate__slideInRight"
-                src={myPicture}
+                src="/images/pp.jpg"
                 alt="this is me"
             />
             <div
@@ -83,3 +81,50 @@ import { MenuItem } from "./atoms/menu-item";
         </div>
     </Content>
 </div>
+
+<script is:inline>
+    const TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function(){
+        const i = this.loopNum % this.toRotate.length;
+        const fullTxt = this.toRotate[i];
+
+        this.txt = fullTxt.substring(0, this.isDeleting ? this.txt.length - 1 : this.txt.length + 1);
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        let delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(() => {
+            this.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        const elements = document.getElementsByClassName('typewrite');
+        for (const element of elements) {
+            var toRotate = element.getAttribute('data-type');
+            var period = element.getAttribute('data-period');
+            if (toRotate) new TxtType(element, JSON.parse(toRotate.replaceAll('\'', '\"')), period);
+        }
+        var css = document.createElement("style");
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
+        document.body.appendChild(css);
+    };
+</script>
